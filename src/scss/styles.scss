@@ -1,0 +1,18 @@
+.icon {
+    width: 100px;
+    height: 100px;
+    background: #F00;
+    display: inline-block;
+    border-radius: 50%
+//    &__img {
+//
+//    }
+}
+
+$items: 1 #f2836b, 2 #60b6e3, 3 #fb9f00, 4 #8cb206, 5 #facf00, 6 #f26510, 7 #60b6e3, 8 #fb9f00, 9 #8cb206, 10 #facf00;
+
+@each $i in $items {
+    .icon:nth-child(#{nth($i, 1)}) {
+        background: #{nth($i, 2)};
+    }
+}

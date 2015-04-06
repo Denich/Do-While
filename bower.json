@@ -1,0 +1,22 @@
+{
+  "name": "gittrainee",
+  "version": "0.0.0",
+  "homepage": "https://github.com/semvitforfun/gittrainee",
+  "authors": [
+    "Vitaliy Semenyk <semvitforfun@gmail.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
