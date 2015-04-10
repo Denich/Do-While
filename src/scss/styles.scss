@@ -1,18 +1,201 @@
-.icon {
-    width: 100px;
-    height: 100px;
-    background: #F00;
-    display: inline-block;
-    border-radius: 50%
-//    &__img {
-//
-//    }
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #CCCCCC;
 }
 
-$items: 1 #f2836b, 2 #60b6e3, 3 #fb9f00, 4 #8cb206, 5 #facf00, 6 #f26510, 7 #60b6e3, 8 #fb9f00, 9 #8cb206, 10 #facf00;
+.m-page{
+    margin: 0 auto;
+    width: 320px;
+    height: 548px;
+    background-color: #F1F3F5;
 
-@each $i in $items {
-    .icon:nth-child(#{nth($i, 1)}) {
-        background: #{nth($i, 2)};
+    &__line  {
+        position: relative;
+        height: 45px;
     }
+}
+
+.menu{
+    background-color: #F1F3F5;
+
+    &__main-button{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 14%;
+        height: 100%;
+        &_img{
+            background-image: url("../images/iconHamburger.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            width: 20px;
+            height: 18px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+
+            left: 50%;
+            margin-left: -10px;
+        }
+        &:hover{
+            background-color: #CDD2D9;
+        }
+    }
+    &__add-button{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 14%;
+        height: 100%;
+        &_img{
+            background-image: url("../images/iconPlus.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+
+            left: 50%;
+            margin-left: -10px;
+        }
+        &:hover{
+            background-color: #CDD2D9;
+        }
+
+    }
+    &__label{
+        position: absolute;
+        left: 14%;
+        right: 14%;
+        height: 100%;
+        text-align: center;
+        line-height: 45px;
+    }
+}
+
+.item{
+    background-color: #FFFFFF;
+    margin-bottom: 1px;
+
+    &__left{
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 12%;
+          height: 100%;
+        &_checkbox{
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+
+            left: 50%;
+            margin-left: -8px;
+
+
+            & input[type=checkbox]{
+                display: none;
+
+            }
+            & input[type=checkbox] + label{
+                cursor: pointer;
+            }
+
+            & input[type=checkbox] + label:before{
+                content: "";
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+                margin: 0 5px 0 0;
+                background-image: url('../images/inputCheckBox0.png');
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+
+            }
+            & input[type="checkbox"]:checked + label:before {
+                background-image: url(../images/inputCheckBox1.png);
+            }
+        }
+    }
+
+    &__right{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 21%;
+        height: 100%;
+        display: table;
+        &_container{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        &_item{
+            font-family: "EncodeSansWide Bold";
+            font-size: 9px;
+        }
+
+
+    }
+
+    &__description{
+        position: absolute;
+        left: 12%;
+        right: 21%;
+        height: 100%;
+
+        display: inline-block;
+        vertical-align: middle;
+        &_container{
+            position: absolute;
+            top: 50%;
+            margin-top: -13px;
+        }
+        &_name{
+            font-family: "EncodeSansWide Regular" ;
+            font-size: 15px;
+            color: #000;
+        }
+        &_category{
+            font-family: "EncodeSansWide Semi-Bold" ;
+            font-size: 9px;
+            color: #ABB4BE;
+
+        }
+    }
+}
+
+.alarm-img{
+    width: 9px;
+    height: 10px;
+    float: left;
+    content: "";
+    background-image: url("../images/ic_notifications_none.png");
+    margin-right: 4px;
+}
+.time-img{
+    width: 9px;
+    height: 9px;
+    float: left;
+    content: "";
+    background-image: url("../images/ic_access_time.png");
+    margin-right: 4px;
+}
+
+.circle{
+    float:left;
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.color_green{
+    background: green;
+}
+.color_orange{
+    background: orange;
 }
